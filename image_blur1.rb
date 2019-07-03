@@ -5,8 +5,11 @@ class Image
 		@image = image
 	end
 
+
 	def output_image
-		puts "#{@image}"
+		@image.each do |row|
+			puts row.join
+	end
   end
 end
 
@@ -17,4 +20,6 @@ image = Image.new([
   [0, 0, 0, 0]
 ])
 image.output_image
+
+
 
